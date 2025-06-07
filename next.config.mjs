@@ -7,6 +7,7 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   output: 'export',
+  distDir: 'out',
   /**
    * Set base path. This is the slug of your GitHub repository.
    *
