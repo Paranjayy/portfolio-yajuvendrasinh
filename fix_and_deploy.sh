@@ -8,8 +8,8 @@ echo ""
 echo "🔨 Fixing GitHub Actions deployment issues..."
 echo "1. Added --legacy-peer-deps to resolve date-fns dependency conflict"
 echo "2. Fixed next-themes import path in theme-provider.tsx"
-echo "3. Added explicit export step to create out directory"
-echo "4. Added export script to package.json"
+echo "3. FINAL FIX: Removed deprecated 'next export' command"
+echo "4. Using Next.js 15+ automatic export with output: 'export' config"
 
 echo ""
 echo "➕ Adding changes..."
@@ -29,11 +29,11 @@ git commit -m "fix: Resolve GitHub Actions deployment issues
 - Changed from 'next-themes/dist/types' to 'next-themes'
 - Resolves TypeScript compilation error in build process
 
-🚀 Export Fix:
-- Added explicit 'npx next export' step to workflow
-- Added 'export' script to package.json
-- Creates the required 'out' directory for GitHub Pages
-- Verifies export directory creation with debug logs"
+🎯 FINAL Fix - Removed Deprecated Export:
+- Removed deprecated 'npx next export' command from workflow
+- Next.js 15+ automatically exports with 'output: export' config
+- We already had correct config in next.config.mjs
+- Build step now automatically creates out/ directory"
 
 echo ""
 echo "🚀 Pushing to GitHub..."
