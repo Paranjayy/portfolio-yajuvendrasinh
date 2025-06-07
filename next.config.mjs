@@ -6,6 +6,9 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  output: 'export',
+  basePath: '/portfolio-yajuvendrasinh',
+  trailingSlash: true,
   images: {
     unoptimized: true,
   },
