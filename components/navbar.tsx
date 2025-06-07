@@ -117,8 +117,8 @@ export default function Navbar() {
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex h-12 items-center justify-between">
-          <div className="flex-shrink-0 relative">
+        <div className="flex h-16 items-center justify-between">
+          <div className="flex items-center flex-shrink-0 relative">
             <Link
               ref={portfolioRef}
               href="/"
