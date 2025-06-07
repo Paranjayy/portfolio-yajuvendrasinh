@@ -5,8 +5,9 @@ git config user.name "Yajuvendrasinh"
 git config user.email "yajuvendrasinh@portfolio.dev"
 
 echo ""
-echo "🔨 Fixing GitHub Actions deployment issue..."
-echo "Added --legacy-peer-deps to resolve date-fns dependency conflict"
+echo "🔨 Fixing GitHub Actions deployment issues..."
+echo "1. Added --legacy-peer-deps to resolve date-fns dependency conflict"
+echo "2. Fixed next-themes import path in theme-provider.tsx"
 
 echo ""
 echo "➕ Adding changes..."
@@ -14,12 +15,17 @@ git add .
 
 echo ""
 echo "💾 Committing fix..."
-git commit -m "fix: Add --legacy-peer-deps to GitHub Actions workflow
+git commit -m "fix: Resolve GitHub Actions deployment issues
 
-- Resolves date-fns dependency conflict in CI/CD
+🔧 Dependency Fix:
+- Added --legacy-peer-deps to resolve date-fns dependency conflict
 - react-day-picker@8.10.1 requires date-fns@^2.28.0 || ^3.0.0
 - Current project uses date-fns@4.1.0
-- Using --legacy-peer-deps to bypass version conflict safely"
+
+🎯 TypeScript Fix:
+- Fixed next-themes import in theme-provider.tsx
+- Changed from 'next-themes/dist/types' to 'next-themes'
+- Resolves TypeScript compilation error in build process"
 
 echo ""
 echo "🚀 Pushing to GitHub..."
