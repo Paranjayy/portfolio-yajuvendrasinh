@@ -8,7 +8,8 @@ echo ""
 echo "🔨 Fixing GitHub Actions deployment issues..."
 echo "1. Added --legacy-peer-deps to resolve date-fns dependency conflict"
 echo "2. Fixed next-themes import path in theme-provider.tsx"
-echo "3. Added debugging step to check build output directory"
+echo "3. Added explicit export step to create out directory"
+echo "4. Added export script to package.json"
 
 echo ""
 echo "➕ Adding changes..."
@@ -28,10 +29,11 @@ git commit -m "fix: Resolve GitHub Actions deployment issues
 - Changed from 'next-themes/dist/types' to 'next-themes'
 - Resolves TypeScript compilation error in build process
 
-🔍 Debugging Fix:
-- Added directory listing step to workflow
-- Will help identify where build output is being created
-- Ensures proper artifact upload path"
+🚀 Export Fix:
+- Added explicit 'npx next export' step to workflow
+- Added 'export' script to package.json
+- Creates the required 'out' directory for GitHub Pages
+- Verifies export directory creation with debug logs"
 
 echo ""
 echo "🚀 Pushing to GitHub..."
