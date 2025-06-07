@@ -8,6 +8,7 @@ echo ""
 echo "🔨 Fixing GitHub Actions deployment issues..."
 echo "1. Added --legacy-peer-deps to resolve date-fns dependency conflict"
 echo "2. Fixed next-themes import path in theme-provider.tsx"
+echo "3. Added debugging step to check build output directory"
 
 echo ""
 echo "➕ Adding changes..."
@@ -25,7 +26,12 @@ git commit -m "fix: Resolve GitHub Actions deployment issues
 🎯 TypeScript Fix:
 - Fixed next-themes import in theme-provider.tsx
 - Changed from 'next-themes/dist/types' to 'next-themes'
-- Resolves TypeScript compilation error in build process"
+- Resolves TypeScript compilation error in build process
+
+🔍 Debugging Fix:
+- Added directory listing step to workflow
+- Will help identify where build output is being created
+- Ensures proper artifact upload path"
 
 echo ""
 echo "🚀 Pushing to GitHub..."

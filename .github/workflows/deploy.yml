@@ -38,6 +38,15 @@ jobs:
       - name: Build with Next.js 🏗️
         run: npm run build
 
+      - name: Debug - List directory contents 🔍
+        run: |
+          echo "Current directory contents:"
+          ls -la
+          echo "Looking for out directory:"
+          ls -la out/ || echo "out directory not found"
+          echo "Looking for .next directory:"
+          ls -la .next/ || echo ".next directory not found"
+
       - name: Upload artifact 📡
         uses: actions/upload-pages-artifact@v3
         with:
